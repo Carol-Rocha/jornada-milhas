@@ -1,0 +1,44 @@
+.app-footer{
+  background-color: #1D1B20;
+  padding: 50px 0;
+
+  small{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &__box{
+  display: flex;
+  justify-content: space-between;
+
+
+    &--left{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      // background-color: red;
+
+      img{
+        height: 40px;
+        width: 161.84px;
+      }
+
+
+    }
+
+    &--right{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      // background-color: blue;
+
+      div{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
+  }
+}
