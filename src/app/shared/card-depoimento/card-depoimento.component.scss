@@ -1,0 +1,35 @@
+.depoimento {
+  max-width: 320px;
+  background-color: #FEF7FF;
+  border: none;
+
+  img {
+    max-width: 56px;
+    max-height: 56px;
+    margin-top: 16px;
+  }
+
+  .box-depoimento__info {
+    padding: 0;
+    list-style: none;
+
+
+
+    li{
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &--autoria{
+      margin-top: 10px;
+      font-weight: bolder;
+    }
+  }
+
+  mat-card-content {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+  }
+}
