@@ -1,49 +1,93 @@
-.modal {
-  // border: 1px solid #1D1B20;
-  max-width: 100%;
+.modal{
   display: flex;
   flex-direction: column;
-  h1 {
-    font-size: 32px;
-    padding: 12px;
-  }
-  .selecao-idade {
+  margin-bottom: 12px;
+
+  .container{
     display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 24px;
+
+
+  }
+
+   &__selecao-idade{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 50px;
 
-    ul {
-      list-style-type: none;
-      margin: 0 0 0 -1em;
-      padding: 0;
-      li {
-        margin-bottom: 10px;
-        margin: 12px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
+
+    &-viajante{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+
+      h2{
         color: #1D1B20;
-        text-align: start;
-        padding: 0;
+        font-size: 1rem;
+        margin: 0;
 
-        span {
-          vertical-align: middle;
-          padding: 0 12px;
-        }
+      }
+
+      span{
+        color: #1D1B20;
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+
+      div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
       }
     }
-  }
-  .selecao-categoria {
-    margin-top: 32px;
-    color: #1D1B20;
-  }
-  .modal-actions {
+
+   }
+
+   &__categoria{
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    button {
-      margin: 0 8px;
-      width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    h2{
+      color: #1D1B20;
+      font-size: 1rem;
+      margin: 0;
+
     }
-  }
+   }
+
+   &__actions {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 3px;
+
+        button{
+          font-size: 1rem;
+          width: 250px;
+
+        }
+
+        &--cancelar{
+          color: #1D192B;
+          background-color: #E8DEF8;
+        }
+
+        &--aplicar{
+          color: #ffffff;
+           background-color: #6750A4;
+        }
+
+      }
+
 }
+
+
+
+
+
+

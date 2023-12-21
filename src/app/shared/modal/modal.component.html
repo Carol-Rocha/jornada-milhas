@@ -1,38 +1,54 @@
 <section class="modal">
   <h1 mat-dialog-title>Viajante</h1>
-  <div mat-dialog-content>
-    <div class="selecao-idade">
-      <ul>
-        <li>Adultos</li>
-        <li>(Acima de 12 anos)</li>
-        <li>
+  <div mat-dialog-content class="container">
+    <div class="modal__selecao-idade">
+      <section class="modal__selecao-idade-viajante">
+        <h2>Adultos</h2>
+        <span>(Acima de 12 anos)</span>
+        <div>
           <app-botao-controle operacao="decrementar"></app-botao-controle>
           <span>1</span>
           <app-botao-controle operacao="incrementar"></app-botao-controle>
-        </li>
-      </ul>
-      <ul>
-        <li>Crianças</li>
-        <li>(Entre 2 e 11 anos)</li>
-        <li>
+        </div>
+      </section>
+      <section class="modal__selecao-idade-viajante">
+        <h2>Crianças</h2>
+        <span>(Entre 2 e 11 anos)</span>
+        <div>
           <app-botao-controle operacao="decrementar"></app-botao-controle>
           <span>1</span>
           <app-botao-controle operacao="incrementar"></app-botao-controle>
-        </li>
-      </ul>
-      <ul>
-        <li>Bebês</li>
-        <li>(Até 2 anos)</li>
-        <li>
+        </div>
+      </section>
+      <section class="modal__selecao-idade-viajante">
+        <h2>Bebês</h2>
+        <span>(Até 2 anos)</span>
+        <div>
           <app-botao-controle operacao="decrementar"></app-botao-controle>
           <span>1</span>
           <app-botao-controle operacao="incrementar"></app-botao-controle>
-        </li>
-      </ul>
+        </div>
+      </section>
+    </div>
+    <div class="modal__categoria">
+      <h2>Categoria</h2>
+
+      <mat-chip-list aria-label="categoria">
+        <mat-chip>
+          <mat-icon matPrefix>check</mat-icon>
+          Econômica</mat-chip
+        >
+        <mat-chip>
+          <mat-icon matPrefix>check</mat-icon>
+          Executiva</mat-chip
+        >
+      </mat-chip-list>
     </div>
   </div>
-  <div mat-dialog-actions>
-    <button mat-button mat-dialog-close>Cancelar</button>
-    <button mat-button>Aplicar</button>
+  <div mat-dialog-actions class="modal__actions">
+    <button mat-button mat-dialog-close class="modal__actions--cancelar">
+      Cancelar
+    </button>
+    <button mat-button class="modal__actions--aplicar">Aplicar</button>
   </div>
 </section>
