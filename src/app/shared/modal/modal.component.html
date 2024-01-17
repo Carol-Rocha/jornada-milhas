@@ -34,12 +34,36 @@
       <h2>Categoria</h2>
 
       <mat-chip-list aria-label="categoria">
-        <mat-chip>
-          <mat-icon matPrefix>check</mat-icon>
+        <mat-chip
+          value="Econômica"
+          [selected]="
+            formBuscaService.formBusca.get('tipo')?.value === 'Econômica'
+          "
+          (click)="formBuscaService.alterarTipo('Econômica')"
+        >
+          <mat-icon
+            matPrefix
+            *ngIf="
+              formBuscaService.formBusca.get('tipo')?.value === 'Econômica'
+            "
+            >check</mat-icon
+          >
           Econômica</mat-chip
         >
-        <mat-chip>
-          <mat-icon matPrefix>check</mat-icon>
+        <mat-chip
+          value="Executiva"
+          [selected]="
+            formBuscaService.formBusca.get('tipo')?.value === 'Executiva'
+          "
+          (click)="formBuscaService.alterarTipo('Executiva')"
+        >
+          <mat-icon
+            matPrefix
+            *ngIf="
+              formBuscaService.formBusca.get('tipo')?.value === 'Executiva'
+            "
+            >check</mat-icon
+          >
           Executiva</mat-chip
         >
       </mat-chip-list>
