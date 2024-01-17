@@ -1,3 +1,4 @@
+import { FormBuscaService } from 'src/app/core/services/form/form-busca.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  constructor() {}
+  constructor(public formBuscaService: FormBuscaService) {}
 
   ngOnInit(): void {}
 }
