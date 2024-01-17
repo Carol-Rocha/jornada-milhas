@@ -16,7 +16,31 @@ export class FormBuscaService {
       origem: new FormControl(null),
       destino: new FormControl(null),
       tipo: new FormControl('Executiva'),
+      adultos: new FormControl(1),
+      criancas: new FormControl(0),
+      bebes: new FormControl(0),
     });
+  }
+
+  getDescricaoPassageiros(): string {
+    let descricao: string = '';
+
+    const adultos = this.formBusca.get('adultos')?.value;
+    const criancas = this.formBusca.get('criancas')?.value;
+    const bebes = this.formBusca.get('bebes')?.value;
+    if (adultos && adultos > 0) {
+      descricao += `${adultos} adulto${adultos > 1 ? 's' : null}`;
+    }
+    if (criancas && criancas > 0) {
+      descricao += `${descricao ? ',' : ''} criança${
+        criancas > 1 ? 's' : null
+      }`;
+    }
+    if (bebes && bebes > 0) {
+      descricao += `${descricao ? ',' : ''} bebê${bebes > 1 ? 's' : null}`;
+    }
+
+    return descricao;
   }
 
   obterControle(nome: string): FormControl {
