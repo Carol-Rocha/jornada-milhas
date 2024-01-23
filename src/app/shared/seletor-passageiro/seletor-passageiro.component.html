@@ -1,0 +1,15 @@
+<section class="selecao-idade-viajante">
+  <h2>{{ tipoViajante }}</h2>
+  <span>{{ descricao }}</span>
+  <div>
+    <app-botao-controle
+      operacao="decrementar"
+      (click)="decrementar()"
+    ></app-botao-controle>
+    <span>{{ value }}</span>
+    <app-botao-controle
+      operacao="incrementar"
+      (click)="incrementar()"
+    ></app-botao-controle>
+  </div>
+</section>

@@ -5,12 +5,20 @@
   .flex-container {
       display: flex;
       align-items: center;
+
       gap: 12px;
       margin: 16px 0;
+      flex-wrap: wrap;
+
+
   }
 
   .input-container {
-      margin-bottom: -1.25em;
+    max-width: 155.5px
+  }
+
+  .input-date{
+    margin-right: 12px;
   }
 
   .mat-button-toggle-checked {
@@ -31,4 +39,15 @@
           cursor: pointer;
       }
   }
+
+  .block-container{
+   display: block;
+  }
+
+
+
+
 }
+
+
+

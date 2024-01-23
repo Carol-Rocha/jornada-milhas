@@ -10,4 +10,8 @@ export class FormBuscaComponent implements OnInit {
   constructor(public formBuscaService: FormBuscaService) {}
 
   ngOnInit(): void {}
+
+  buscar() {
+    console.log(this.formBuscaService.formBusca.value);
+  }
 }

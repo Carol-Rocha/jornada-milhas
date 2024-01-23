@@ -1,0 +1,27 @@
+.selecao-idade-viajante{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+
+    h2{
+      color: #1D1B20;
+      font-size: 1rem;
+      margin: 0;
+
+    }
+
+    span{
+      color: #1D1B20;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+
+    div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
