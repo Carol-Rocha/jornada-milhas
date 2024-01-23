@@ -15,15 +15,15 @@ export class FormBuscaService {
       somenteIda: new FormControl(false),
       origem: new FormControl(null),
       destino: new FormControl(null),
-      tipo: new FormControl('Executiva'),
-      adultos: new FormControl(1),
+      tipo: new FormControl('Categoria'),
+      adultos: new FormControl(0),
       criancas: new FormControl(0),
       bebes: new FormControl(0),
     });
   }
 
   getDescricaoPassageiros(): string {
-    let descricao: string = '';
+    let descricao: string = 'Viajante';
 
     const adultos = this.formBusca.get('adultos')?.value;
     const criancas = this.formBusca.get('criancas')?.value;
@@ -56,6 +56,16 @@ export class FormBuscaService {
       tipo,
     });
     console.log('tipo:', tipo);
+  }
+
+  trocarOrigemDestino(): void {
+    const origem = this.formBusca.get('origem')?.value;
+    const destino = this.formBusca.get('destino')?.value;
+
+    this.formBusca.patchValue({
+      origem: destino,
+      destino: origem,
+    });
   }
 
   openDialog() {
