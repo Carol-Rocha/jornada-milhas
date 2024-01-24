@@ -10,3 +10,10 @@ export interface IUnidadeFederativa {
   nome: string;
   sigla: string;
 }
+
+export interface IDepoimento {
+  id: number;
+  texto: string;
+  autor: string;
+  avatar: string;
+}
