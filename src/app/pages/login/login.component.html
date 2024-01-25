@@ -1,0 +1,65 @@
+<app-banner src="assets/imagens/banner-login.png" alt="banner login jornada">
+</app-banner>
+<section class="login-component">
+  <mat-card class="login">
+    <div class="image-container">
+      <figure>
+        <img
+          src="assets/imagens/simbolo-bussola.png "
+          alt="simbolo de uma bússula laranja"
+        />
+      </figure>
+    </div>
+    <div class="form-container">
+      <mat-card-header>
+        <mat-card-title> Login </mat-card-title>
+      </mat-card-header>
+      <form [formGroup]="loginForm">
+        <mat-card-content>
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="Digite seu e-mail"
+            />
+            <mat-error
+              *ngIf="loginForm.controls['email']?.errors?.['required'] "
+              >O email é obrigatório</mat-error
+            >
+            <mat-error *ngIf="loginForm.controls['email']?.errors?.['email']"
+              >Digite um email válido</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input
+              formControlName="senha"
+              matInput
+              placeholder="Digite sua senha"
+            />
+            <mat-error *ngIf="loginForm.controls['senha']?.errors?.['required']"
+              >A senha é obrigatória</mat-error
+            >
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            [disabled]="loginForm.invalid"
+            (click)="login()"
+            mat-raised-button
+            color="primary"
+          >
+            ACESSAR MINHA CONTA
+          </button>
+        </mat-card-actions>
+        <p>
+          Ainda não possui conta?
+          <a
+            ><strong><u>Clique aqui para se cadastrar</u></strong>
+          </a>
+        </p>
+      </form>
+    </div>
+  </mat-card>
+</section>

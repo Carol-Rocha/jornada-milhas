@@ -17,3 +17,8 @@ export interface IDepoimento {
   autor: string;
   avatar: string;
 }
+
+export interface ILogin {
+  email: string;
+  senha: string;
+}
